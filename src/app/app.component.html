@@ -1,0 +1,17 @@
+<input type="text"  [ngStyle]="{'border-radius':'13px'}" [(ngModel)]="search" (ngModelChange)="searchData()">
+<ag-grid-angular style="margin-left:10px;height: 300px; width: 100%;" *ngIf="rowData" class="ag-theme-balham"
+
+                 [gridOptions]="gridOptions"
+                 [columnDefs]="columnDefs"
+                 [rowData]="rowData"
+                 enableColResize
+                 enableSorting
+                 enableFilter
+                 groupHeaders
+                 suppressRowClickSelection
+                 toolPanelSuppressGroups
+                 toolPanelSuppressValues
+                 rowSelection="multiple"
+                 (gridReady)="onReady($event)">
+</ag-grid-angular>
+
